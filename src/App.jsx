@@ -7,7 +7,7 @@ import AudioPlayer from './components/AudioPlayer';
 
 import audioFile from './audio/First.mp4'; // Import the MP3 file
 
-
+const BookTitle = "Gaunts Ghost";
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
  
 
       <div >
-        <h1>Currently Listening To:</h1>
+        <h1>Currently Listening To: {BookTitle}</h1>
 
         <AudioPlayer
           src={audioFile}
