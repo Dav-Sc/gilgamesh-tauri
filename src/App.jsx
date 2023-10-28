@@ -1,8 +1,9 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
-import "./App.css";
+// import "./App.css";
 import AudioPlayer from './components/AudioPlayer';
+import Navbar from "./components/Navbar";
 
 
 import audioFile from './audio/First.mp4'; // Import the MP3 file
@@ -14,10 +15,13 @@ function App() {
 
   return (
 
-    <body className="container" >
+    
+    <body >
+      <Navbar />
  
 
-      <div >
+      <div className="container" >
+        
         <h1>Currently Listening To: {BookTitle}</h1>
 
         <AudioPlayer
