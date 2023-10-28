@@ -9,8 +9,6 @@ import {
     BsSkipForward
 
 } from 'react-icons/bs';
-// import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './AudioPlayer.css'; // Import your custom CSS (if needed)
 
 const AudioPlayer = ({ src }) => {
 
@@ -126,7 +124,7 @@ const AudioPlayer = ({ src }) => {
         <div className="container mx-auto text-white">
             <audio ref={audioRef} src={src}></audio>
 
-            <progress className="progress progress-primary w-56" 
+            <progress className="progress w-56 w-screen" 
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
