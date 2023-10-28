@@ -124,7 +124,7 @@ const AudioPlayer = ({ src }) => {
         <div className="container mx-auto text-white">
             <audio ref={audioRef} src={src}></audio>
 
-            <progress className="progress w-56 w-screen" 
+            <progress className="progress w-56 w-screen secondary" 
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}

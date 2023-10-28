@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
     BsBookmarksFill,
     BsBookFill,
     BsList,
     BsGithub
 } from 'react-icons/bs';
-import ThemeSwitcher from './ThemeSwitcher';
 
-const Navbar = () => {
+const Navbar = ({ onFileSelect }) => {
+    const fileInputRef = useRef(null);
+
+    const handleSelectBookClick = () => {
+        // Trigger a click event on the hidden file input
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (event) => {
+        const selectedFile = event.target.files[0];
+        if (selectedFile) {
+            onFileSelect(selectedFile);
+        }
+    };
+
     return (
         <>
             <div className="navbar bg-base-100">
@@ -16,15 +29,13 @@ const Navbar = () => {
                         <label tabIndex={0} className="btn btn-ghost btn-circle">
                             <BsList />
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Select Book</a></li>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-1 shadow bg-base-100 rounded-box w-52">
+                            <li onClick={handleSelectBookClick} style={{ cursor: 'pointer' }}>
+                                <a>Select Book</a>
+                            </li>
                             <li className="dropdown">
                                 <a>Theme</a>
-                                <ul className="menu dropdown-content">
-                                    <li>
-                                        <ThemeSwitcher />
-                                    </li>
-                                </ul>
+                                {/* Your ThemeSwitcher component here */}
                             </li>
                             <li><a href='https://github.com/HappyGromper/gilgamesh-tauri' target="_blank">About <BsGithub /> </a></li>
                         </ul>
@@ -42,6 +53,14 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
+            {/* Hidden file input */}
+            <input
+                type="file"
+                accept=".mp3, .mp4"
+                style={{ display: 'none' }}
+                ref={fileInputRef}
+                onChange={handleFileChange}
+            />
         </>
     );
 };
