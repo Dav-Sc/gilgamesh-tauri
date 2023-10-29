@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import * as mm from 'music-metadata-browser';
 import {
     BsFillFastForwardFill,
     BsFillRewindFill,

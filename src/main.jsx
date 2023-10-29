@@ -4,7 +4,6 @@ import App from "./App";
 import AudioPlayer from "./components/AudioPlayer";
 import Navbar from "./components/Navbar";
 import FileUploader from "./components/FileUploader"
-import ThemeSwitcher from "./components/ThemeSwitcher"
 import "./input.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

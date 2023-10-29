@@ -5,6 +5,7 @@ import {
     BsList,
     BsGithub
 } from 'react-icons/bs';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const Navbar = ({ onFileSelect }) => {
     const fileInputRef = useRef(null);
@@ -36,6 +37,7 @@ const Navbar = ({ onFileSelect }) => {
                             <li className="dropdown">
                                 <a>Theme</a>
                                 {/* Your ThemeSwitcher component here */}
+                                <ThemeSwitcher />
                             </li>
                             <li><a href='https://github.com/HappyGromper/gilgamesh-tauri' target="_blank">About <BsGithub /> </a></li>
                         </ul>
