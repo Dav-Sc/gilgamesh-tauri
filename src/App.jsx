@@ -9,8 +9,7 @@ import Navbar from "./components/Navbar";
 function App() {
   const [audioFile, setAudioFile] = useState(null);
   const [metadata, setMetadata] = useState({});
-  const [coverImage, setCoverImage] = useState(null);
-  const [bookTitle, setBookTitle] = useState("Gaunts Ghost"); // Initial title
+  const [bookTitle, setBookTitle] = useState("The sound of silence"); // Initial title
 
   // Function to handle the selected audio file
   const handleAudioFileSelect = (file) => {
@@ -40,10 +39,9 @@ function App() {
       <Navbar onFileSelect={handleAudioFileSelect} />
       <div className="container">
         <h1>Currently Listening To: {bookTitle}</h1>
-        {coverImage && <img src={coverImage} alt="Cover" />}
         <input
           type="file"
-          accept=".mp3, .mp4"
+          accept=".mp3, .mp4, .m4a, .m4b"
           onChange={(e) => handleAudioFileSelect(e.target.files[0])}
           style={{ display: 'none' }}
         />

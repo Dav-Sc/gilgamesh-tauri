@@ -12,7 +12,7 @@ const FileUploader = ({ onFileSelect }) => {
     <div>
       <input
         type="file"
-        accept=".mp3, .mp4"
+        accept=".mp3, .mp4, .m4a, .m4b"
         onChange={handleFileChange}
         style={{ display: 'none' }}
         id="fileInput"

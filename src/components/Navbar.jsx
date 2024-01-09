@@ -44,7 +44,7 @@ const Navbar = ({ onFileSelect }) => {
                     </div>
                 </div>
                 <div className="navbar-center">
-                    <a className="btn btn-ghost normal-case text-xl">Gilgamesh</a>
+                    <a className="btn btn-ghost disabled normal-case text-xl">Gilgamesh</a>
                 </div>
                 <div className="navbar-end">
                     <button className="btn btn-ghost btn-circle">
@@ -58,7 +58,7 @@ const Navbar = ({ onFileSelect }) => {
             {/* Hidden file input */}
             <input
                 type="file"
-                accept=".mp3, .mp4"
+                accept=".mp3, .mp4, .m4a, .m4b"
                 style={{ display: 'none' }}
                 ref={fileInputRef}
                 onChange={handleFileChange}

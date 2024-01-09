@@ -2,7 +2,7 @@
 name = "gilgamesh-tauri"
 version = "0.0.0"
 description = "A Tauri App"
-authors = ["you"]
+authors = ["David Schiereck"]
 license = ""
 repository = ""
 edition = "2021"
