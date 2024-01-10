@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 
 
 function App() {
+  invoke('applicaitoninit_command') 
+
   const [audioFile, setAudioFile] = useState(null);
   const [metadata, setMetadata] = useState({});
   const [bookTitle, setBookTitle] = useState("The sound of silence"); // Initial title
@@ -15,9 +17,7 @@ function App() {
   const handleAudioFileSelect = (file) => {
     setAudioFile(file);
     localStorage.setItem("audioFile", JSON.stringify(file));
-    invoke('my_custom_command', { file: file })
-
-  
+    invoke('my_custom_command', { invoke_message: 'Hello!' })
 
   };
 

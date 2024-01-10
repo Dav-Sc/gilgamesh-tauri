@@ -15,7 +15,6 @@ const AudioPlayer = ({ src }) => {
     const [playing, setPlaying] = useState(false);
     const [progress, setProgress] = useState(0);
     const [volume, setVolume] = useState(.5);
-    const [metadata, setMetadata] = useState(null);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
