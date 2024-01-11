@@ -6,6 +6,7 @@ import {
     BsGithub
 } from 'react-icons/bs';
 import ThemeSwitcher from './ThemeSwitcher';
+import LibraryViewer from './LibraryViewer';
 
 const Navbar = ({ onFileSelect }) => {
     const fileInputRef = useRef(null);
@@ -49,6 +50,7 @@ const Navbar = ({ onFileSelect }) => {
                 <div className="navbar-end">
                     <button className="btn btn-ghost btn-circle">
                         <BsBookFill />
+                        <LibraryViewer/>
                     </button>
                     <button className="btn btn-ghost btn-circle">
                         <BsBookmarksFill />
